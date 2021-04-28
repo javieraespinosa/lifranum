@@ -1,0 +1,57 @@
+
+version: '3.6'
+services:
+
+
+   warclight:
+      container_name: warclight
+      image:   jaeo/lifranum-warclight
+      build:
+         context: ./docker/warclight/
+         dockerfile: Dockerfile
+      environment:
+         - "SOLR_URL=http://solr:8983/solr/discovery"
+      ports:
+         - 3000:3000
+      depends_on:
+         - solr
+
+
+   solrwayback:
+      container_name: solrwayback
+      image:    jaeo/lifranum-solrwayback
+      build:
+         context: ./docker/solrwayback/
+         dockerfile: Dockerfile      
+      ports:
+         - 8080:8080
+      volumes:
+         - ./conf/solrwayback/:/root/
+      depends_on:
+         - solr         
+         
+
+   solr:
+      container_name: solr
+      image:    bitnami/solr:7.7.1
+      user:     root
+      ports:
+         - 8983:8983
+      environment:
+         - SOLR_CORE=discovery
+         - SOLR_CORE_CONF_DIR=/conf/discovery
+      volumes:
+         - ./conf/webarchive-discovery/solr7/discovery:/conf/discovery
+         - ./data:/bitnami
+
+
+   warcindexer:
+      container_name: warcindexer
+      image:    ukwa/webarchive-discovery:warc-discovery-3.1.0
+      command:  /bin/sh -c "java -jar /jars/warc-indexer.jar -s $$SOLR_URL -c /warc-indexer.conf /WARC/*.warc.gz"
+      environment:
+         - "SOLR_URL=http://solr:8983/solr/discovery"      
+      volumes:
+         - ./WARC:/WARC
+         - ./conf/webarchive-discovery/warc-indexer.conf:/warc-indexer.conf
+
