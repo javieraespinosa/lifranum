@@ -8,7 +8,7 @@ services:
     image:      jaeo/lifranum-notebook
     command:    pyspark --driver-memory 8g
     environment:
-      PYSPARK_DRIVER_PYTHON: jupyter  #--allow-root
+      PYSPARK_DRIVER_PYTHON: jupyter
       PYSPARK_DRIVER_PYTHON_OPTS: "notebook --NotebookApp.token='' --NotebookApp.notebook_dir='/content' "
       SPARK_PUBLIC_DNS: localhost
       JUPYTER_PORT: 8888
