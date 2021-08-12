@@ -86,7 +86,9 @@ docker-compose -f atlas-tutorial2.yml up
 
 ## Uninstalling
 
-Run the following instruction if you want to free the space used by Docker for this tutorial:
+Stop the containers: `ctr + c`.
+
+Run the following instruction to free all the space used by Docker for this tutorial:
 
 ```sh
 docker-compose -f atlas-tutorial2.yml down --volumes --rmi all
