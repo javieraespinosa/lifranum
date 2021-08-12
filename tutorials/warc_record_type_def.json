@@ -1,0 +1,528 @@
+{
+    
+    "entityDefs": [
+        {
+            "name": "warc_record",
+            "superTypes": ["Referenceable"], 
+            "description": "Extracted with webdiscovery-archive warc-indexer",
+            "attributeDefs": [
+                {
+                    "name": "access_terms",
+                    "typeName": "array<string>",
+                    "isOptional": true
+                },
+                {
+                    "name": "arc_full",
+                    "typeName": "string",
+                    "isOptional": true
+                },
+                {
+                    "name": "arc_harvest",
+                    "typeName": "string",
+                    "isOptional": true
+                },
+                {
+                    "name": "arc_harvesttime",
+                    "typeName": "string",
+                    "isOptional": true
+                },
+                {
+                    "name": "arc_job",
+                    "typeName": "string",
+                    "isOptional": true
+                },
+                {
+                    "name": "arc_name",
+                    "typeName": "string",
+                    "isOptional": true
+                },
+                {
+                    "name": "arc_orig",
+                    "typeName": "string",
+                    "isOptional": true
+                },
+                {
+                    "name": "author",
+                    "typeName": "array<string>",
+                    "isOptional": true
+                },
+                {
+                    "name": "category",
+                    "typeName": "string",
+                    "isOptional": true
+                },
+                {
+                    "name": "collection",
+                    "typeName": "array<string>",
+                    "isOptional": true
+                },
+                {
+                    "name": "collection_id",
+                    "typeName": "string",
+                    "isOptional": true
+                },
+                {
+                    "name": "collections",
+                    "typeName": "array<string>",
+                    "isOptional": true
+                },
+                {
+                    "name": "comments",
+                    "typeName": "array<string>",
+                    "isOptional": true
+                },
+                {
+                    "name": "content",
+                    "typeName": "string",
+                    "isOptional": true
+                },
+                {
+                    "name": "content_encoding",
+                    "typeName": "string",
+                    "isOptional": true
+                },
+                {
+                    "name": "content_ffb",
+                    "typeName": "string",
+                    "isOptional": true
+                },
+                {
+                    "name": "content_first_bytes",
+                    "typeName": "string",
+                    "isOptional": true
+                },
+                {
+                    "name": "content_language",
+                    "typeName": "string",
+                    "isOptional": true
+                },
+                {
+                    "name": "content_length",
+                    "typeName": "int",
+                    "isOptional": true
+                },
+                {
+                    "name": "content_metadata",
+                    "typeName": "string",
+                    "isOptional": true
+                },
+                {
+                    "name": "content_text_length",
+                    "typeName": "int",
+                    "isOptional": true
+                },
+                {
+                    "name": "content_typeName",
+                    "typeName": "string",
+                    "isOptional": true
+                },
+                {
+                    "name": "content_type_droid",
+                    "typeName": "string",
+                    "isOptional": true
+                },
+                {
+                    "name": "content_type_ext",
+                    "typeName": "string",
+                    "isOptional": true
+                },
+                {
+                    "name": "content_type_full",
+                    "typeName": "string",
+                    "isOptional": true
+                },
+                {
+                    "name": "content_type_norm",
+                    "typeName": "string",
+                    "isOptional": true,
+                    "defaultValue": "other"
+                },
+                {
+                    "name": "content_type_served",
+                    "typeName": "string",
+                    "isOptional": true
+                },
+                {
+                    "name": "content_type_tika",
+                    "typeName": "string",
+                    "isOptional": true
+                },
+                {
+                    "name": "content_type_version",
+                    "typeName": "string",
+                    "isOptional": true
+                },
+                {
+                    "name": "crawl_date",
+                    "typeName": "string",
+                    "isOptional": true
+                },
+                {
+                    "name": "crawl_dates",
+                    "typeName": "array<date>",
+                    "isOptional": true
+                },
+                {
+                    "name": "crawl_year",
+                    "typeName": "int",
+                    "isOptional": true
+                },
+                {
+                    "name": "crawl_years",
+                    "typeName": "array<int>",
+                    "isOptional": true
+                },
+                {
+                    "name": "description",
+                    "typeName": "string",
+                    "isOptional": true
+                },
+                {
+                    "name": "domain",
+                    "typeName": "string",
+                    "isOptional": true
+                },
+                {
+                    "name": "elements_used",
+                    "typeName": "array<string>",
+                    "isOptional": true
+                },
+                {
+                    "name": "exif_location",
+                    "typeName": "string",
+                    "isOptional": true
+                },
+                {
+                    "name": "exif_version",
+                    "typeName": "string",
+                    "isOptional": true
+                },
+                {
+                    "name": "generator",
+                    "typeName": "array<string>",
+                    "isOptional": true
+                },
+                {
+                    "name": "hash",
+                    "typeName": "string",
+                    "isOptional": true
+                },
+                {
+                    "name": "hashes",
+                    "typeName": "array<string>",
+                    "isOptional": true
+                },
+                {
+                    "name": "host",
+                    "typeName": "string",
+                    "isOptional": true
+                },
+                {
+                    "name": "host_surt",
+                    "typeName": "array<string>",
+                    "isOptional": true
+                },
+                {
+                    "name": "id_long",
+                    "typeName": "long",
+                    "isOptional": true
+                },
+                {
+                    "name": "image_colours",
+                    "typeName": "array<string>",
+                    "isOptional": true
+                },
+                {
+                    "name": "image_dominant_colour",
+                    "typeName": "string",
+                    "isOptional": true
+                },
+                {
+                    "name": "image_faces",
+                    "typeName": "array<string>",
+                    "isOptional": true
+                },
+                {
+                    "name": "image_faces_count",
+                    "typeName": "int",
+                    "isOptional": true
+                },
+                {
+                    "name": "image_height",
+                    "typeName": "long",
+                    "isOptional": true
+                },
+                {
+                    "name": "image_size",
+                    "typeName": "long",
+                    "isOptional": true
+                },
+                {
+                    "name": "image_width",
+                    "typeName": "long",
+                    "isOptional": true
+                },
+                {
+                    "name": "index_time",
+                    "typeName": "string",
+                    "isOptional": true
+                },
+                {
+                    "name": "institution",
+                    "typeName": "string",
+                    "isOptional": true
+                },
+                {
+                    "name": "keywords",
+                    "typeName": "array<string>",
+                    "isOptional": true
+                },
+                {
+                    "name": "last_modified",
+                    "typeName": "string",
+                    "isOptional": true
+                },
+                {
+                    "name": "last_modified_year",
+                    "typeName": "string",
+                    "isOptional": true
+                },
+                {
+                    "name": "license_url",
+                    "typeName": "array<string>",
+                    "isOptional": true
+                },
+                {
+                    "name": "links",
+                    "typeName": "array<string>",
+                    "isOptional": true
+                },
+                {
+                    "name": "links_domains",
+                    "typeName": "array<string>",
+                    "isOptional": true
+                },
+                {
+                    "name": "links_hosts",
+                    "typeName": "array<string>",
+                    "isOptional": true
+                },
+                {
+                    "name": "links_hosts_surts",
+                    "typeName": "array<string>",
+                    "isOptional": true
+                },
+                {
+                    "name": "links_images",
+                    "typeName": "array<string>",
+                    "isOptional": true
+                },
+                {
+                    "name": "links_public_suffixes",
+                    "typeName": "array<string>",
+                    "isOptional": true
+                },
+                {
+                    "name": "locations",
+                    "typeName": "array<string>",
+                    "isOptional": true
+                },
+                {
+                    "name": "parse_error",
+                    "typeName": "array<string>",
+                    "isOptional": true
+                },
+                {
+                    "name": "pdf_pdfa_errors",
+                    "typeName": "array<string>",
+                    "isOptional": true
+                },
+                {
+                    "name": "pdf_pdfa_is_valid",
+                    "typeName": "string",
+                    "isOptional": true
+                },
+                {
+                    "name": "postcode",
+                    "typeName": "array<string>",
+                    "isOptional": true
+                },
+                {
+                    "name": "postcode_district",
+                    "typeName": "array<string>",
+                    "isOptional": true
+                },
+                {
+                    "name": "public_suffix",
+                    "typeName": "string",
+                    "isOptional": true
+                },
+                {
+                    "name": "publication_date",
+                    "typeName": "string",
+                    "isOptional": true
+                },
+                {
+                    "name": "publication_year",
+                    "typeName": "string",
+                    "isOptional": true
+                },
+                {
+                    "name": "record_typeName",
+                    "typeName": "string",
+                    "isOptional": true
+                },
+                {
+                    "name": "redirect_to_norm",
+                    "typeName": "string",
+                    "isOptional": true
+                },
+                {
+                    "name": "referrer_url",
+                    "typeName": "string",
+                    "isOptional": true
+                },
+                {
+                    "name": "resourcename",
+                    "typeName": "string",
+                    "isOptional": true
+                },
+                {
+                    "name": "resourcename_facet",
+                    "typeName": "string",
+                    "isOptional": true
+                },
+                {
+                    "name": "sentiment",
+                    "typeName": "string",
+                    "isOptional": true
+                },
+                {
+                    "name": "sentiment_score",
+                    "typeName": "float",
+                    "isOptional": true
+                },
+                {
+                    "name": "server",
+                    "typeName": "array<string>",
+                    "isOptional": true
+                },
+                {
+                    "name": "source_file",
+                    "typeName": "string",
+                    "isOptional": true
+                },
+                {
+                    "name": "source_file_offset",
+                    "typeName": "long",
+                    "isOptional": true
+                },
+                {
+                    "name": "source_file_path",
+                    "typeName": "string",
+                    "isOptional": true
+                },
+                {
+                    "name": "status_code",
+                    "typeName": "int",
+                    "isOptional": true
+                },
+                {
+                    "name": "text",
+                    "typeName": "array<string>",
+                    "isOptional": true
+                },
+                {
+                    "name": "title",
+                    "typeName": "string",
+                    "isOptional": true
+                },
+                {
+                    "name": "typeName",
+                    "typeName": "string",
+                    "isOptional": true
+                },
+                {
+                    "name": "url",
+                    "typeName": "string",
+                    "isOptional": true
+                },
+                {
+                    "name": "url_norm",
+                    "typeName": "string",
+                    "isOptional": true
+                },
+                {
+                    "name": "url_path",
+                    "typeName": "string",
+                    "isOptional": true
+                },
+                {
+                    "name": "url_search",
+                    "typeName": "string",
+                    "isOptional": true
+                },
+                {
+                    "name": "url_typeName",
+                    "typeName": "string",
+                    "isOptional": true
+                },
+                {
+                    "name": "warc_ip",
+                    "typeName": "string",
+                    "isOptional": true
+                },
+                {
+                    "name": "warc_key_id",
+                    "typeName": "string",
+                    "isOptional": true
+                },
+                {
+                    "name": "wayback_date",
+                    "typeName": "long",
+                    "isOptional": true
+                },
+                {
+                    "name": "wct_agency",
+                    "typeName": "string",
+                    "isOptional": true
+                },
+                {
+                    "name": "wct_collections",
+                    "typeName": "array<string>",
+                    "isOptional": true
+                },
+                {
+                    "name": "wct_description",
+                    "typeName": "string",
+                    "isOptional": true
+                },
+                {
+                    "name": "wct_instance_id",
+                    "typeName": "int",
+                    "isOptional": true
+                },
+                {
+                    "name": "wct_subjects",
+                    "typeName": "array<string>",
+                    "isOptional": true
+                },
+                {
+                    "name": "wct_target_id",
+                    "typeName": "string",
+                    "isOptional": true
+                },
+                {
+                    "name": "wct_title",
+                    "typeName": "string",
+                    "isOptional": true
+                },
+                {
+                    "name": "xml_root_ns",
+                    "typeName": "string",
+                    "isOptional": true
+                }
+            ]
+        }
+    ]
+}

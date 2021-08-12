@@ -1,5 +1,7 @@
 
-# Indexing & Browsing WARC files
+# WARC Services
+
+Indexing and Browsing
 
 ## TODO
 * README file

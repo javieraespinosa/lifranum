@@ -1,0 +1,23 @@
+
+version: '3.6'
+services:
+
+   atlas:
+      image: sburn/apache-atlas
+      container_name: atlas
+      command: /opt/apache-atlas-2.1.0/bin/atlas_start.py
+      ports: 
+         - 21000:21000
+
+   jupyter:
+      build: .
+      image: jaeo/lifranum:tutorial
+      container_name: jupyter 
+      command: jupyter lab --allow-root --NotebookApp.notebook_dir='/tutorial'
+      user: root
+      ports: 
+         - 8888:8888
+      volumes:
+         - ./atlas-tutorial2.ipynb:/tutorial/atlas-tutorial2.ipynb
+         - ./warc_record_type_def.json:/tutorial/warc_record_type_def.json
+         - ./img:/tutorial/img
