@@ -25,12 +25,12 @@ The figure below gives an overview of the tutorial's execution environment.
 
 The environment is composed of two docker containers:
 
-* The `atlas` container running **Apache Atlas** (accessible at <http://localhost:21000>).
-* The `jupyter` container running a **Jupyter Notebook** server (accessible at <http://localhost:8888/>).
+* The `atlas` container running **Apache Atlas** (accessible at [localhost:21000](http://localhost:21000)).
+* The `jupyter` container running a **Jupyter Notebook** server (accessible at [localhost:8888](http://localhost:8888)).
 
 All the tutorial dependencies have been installed in the `jupyter` container, so there is no need to install any extra dependencies for running the [tutorial's notebook](atlas-tutorial2.ipynb).
 
-Also, note that `jupyter` acts as a proxy for interacting with `atlas` (i.e., metadata operations are executed via `jupyter` towards `atlas`). You can, however, visually explore the `atlas` content using the **Atlas WebUI** (<http://localhost:21000>).
+Also, note that `jupyter` acts as a proxy for interacting with `atlas` (i.e., metadata operations are executed via `jupyter` towards `atlas`). You can, however, visually explore the `atlas` content using the **Atlas WebUI** [localhost:21000](http://localhost:21000).
 
 ![Environment](img/env-overview.svg)
 
@@ -46,11 +46,11 @@ cd lifranum/tutorials
 Inside `lifranum/tutorials`, build and pull the required docker images as follows:
 
 ```sh
-# build jupyter using .Dockerfile
-docker-compose -f atlas-tutorial2.yml build
+# build jupyter using Dockerfile
+docker-compose -f atlas-tutorial2.yml build jupyter
 
 # pull atlas from dockerhub
-docker-compose -f atlas-tutorial2.yml pull
+docker-compose -f atlas-tutorial2.yml pull atlas
 ```
 
 Run `atlas` and `jupyter` containers:
@@ -61,20 +61,22 @@ docker-compose -f atlas-tutorial2.yml up
 
 At this point, you should be able to access the atlas and jupyter servers:
 
-* **Apache Atlas**: <http://localhost:21000>.
-* **Jupyter Notebook**: <http://localhost:8888>.
+* **Apache Atlas**: [localhost:21000](http://localhost:21000).
+* **JupyterLab**: [localhost:8888](http://localhost:8888).
 
 > Atlas can take up to 1 min to start
 
 ## Start the Tutorial
 
-Once `jupyter`is up, open the [tutorial's notebook](atlas-tutorial2.ipynb) for continuing with the tutorial second part.
+Once `jupyter`is up, open the [tutorial's notebook](atlas-tutorial2.ipynb) in JupyterLab for continuing with the tutorial's second part:
+
+* http://localhost:8888/lab/tree/atlas-tutorial2.ipynb
 
 ## Troubleshooting
 
 Sometimes Atlas displays an error message. If that happens:
 
-* Stop the containers: `ctr+c`.
+* Stop the containers: `ctr + c`.
 * Remove and recreate the containers:
 
 ```sh
