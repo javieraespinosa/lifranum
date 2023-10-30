@@ -25,7 +25,7 @@ The [atlas-tutorial1.yml](./atlas-tutorial1.yml) file you will use in this tutor
 version: '3.6'
 services:
    atlas:
-      image: sburn/apache-atlas
+      image: sburn/apache-atlas:2.1.0
       container_name: atlas
       command: /opt/apache-atlas-2.1.0/bin/atlas_start.py
       ports: 
