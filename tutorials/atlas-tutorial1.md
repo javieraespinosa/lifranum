@@ -66,7 +66,7 @@ _Play-with-Docker = PWD_
 
 * Login into the **Atlas's WebUI** ([localhost:21000](http://localhost:21000/) or the PWD instance's IP). Login/password: **admin/admin**.
 
-    > The `atlas` container takes **~1 min to start**. During this time the Atlas WebUI is unavailable.
+    > The `atlas` container takes **~3 min to start**. During this time the Atlas WebUI is unavailable.
 
 ## Atlas Type System
 
