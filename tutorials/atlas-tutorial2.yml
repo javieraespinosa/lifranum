@@ -13,7 +13,7 @@ services:
       build: .
       image: jaeo/lifranum:tutorial
       container_name: jupyter 
-      command: jupyter lab --allow-root --NotebookApp.notebook_dir='/tutorial'
+      command: jupyter lab --allow-root --NotebookApp.notebook_dir='/tutorial' --NotebookApp.allow_origin='*'
       user: root
       ports: 
          - 8888:8888
