@@ -64,7 +64,7 @@ _Play-with-Docker = PWD_
     docker-compose -f atlas-tutorial1.yml up atlas 
     ```
 
-* Login into the **Atlas's WebUI** ([localhost:21000](http://localhost:21000/) or the PWD instance's IP). Login/password: **admin/admin**.
+* Login into the **Atlas's WebUI** ([localhost:21000](http://localhost:21000/) or the PWD instance's IP) using the login/password: **admin/admin**.
 
     > The `atlas` container takes **~3 min to start**. During this time the Atlas WebUI is unavailable.
 
@@ -114,7 +114,7 @@ There are 3 ways of creating an entity in Atlas:
 
 2. Using a **second terminal** (or **PWD instance**):
 
-   * Run the [quick-start example](https://atlas.apache.org/#/QuickStart) to load **types** and **entities** samples into your Atlas instance (cf. [QuickStartV2.java](https://github.com/apache/atlas/blob/master/webapp/src/main/java/org/apache/atlas/examples/QuickStartV2.java)).
+   * Run the [quick-start example](https://atlas.apache.org/#/QuickStart) to load **types** and **entities** samples into your Atlas instance (cf. [QuickStartV2.java](https://github.com/apache/atlas/blob/master/webapp/src/main/java/org/apache/atlas/examples/QuickStartV2.java)). Use login/password: **admin/admin** if asked.
 
         ```sh
         # if running locally
