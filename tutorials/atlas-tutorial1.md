@@ -123,7 +123,7 @@ There are 3 ways of creating an entity in Atlas:
         # if running in PWD. 
         # Do not forget to replace ATLAS_IP with your own Atlas IP instance
         docker run --rm -it     \
-            sburn/apache-atlas  \ 
+            sburn/apache-atlas:2.1.0  \ 
             /opt/apache-atlas-2.1.0/bin/quick_start.py http://ATLAS_IP:21000
         ```
 
