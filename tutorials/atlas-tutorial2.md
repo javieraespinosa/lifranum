@@ -36,6 +36,14 @@ Also, note that `jupyter` acts as a proxy for interacting with `atlas` (i.e., me
 
 ## Preparing the Environment
 
+> **If you are using Google Shell, execute the following instruction first**.
+> 
+> ```sh
+> export LD_LIBRARY_PATH=/usr/local/lib
+> ```
+> 
+> Otherwise, Docker will not work.
+
 Clone the [LIFRANUM repository](https://github.com/javieraespinosa/lifranum) and move to the `tutorials/` folder:
 
 ```sh
